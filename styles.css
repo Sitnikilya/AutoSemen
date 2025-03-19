@@ -42,9 +42,14 @@ nav ul li a {
 }
 
 .social-icons a {
-    margin: 0 10px;
-    color: #333;
-    font-size: 20px;
+    margin: 0 15px; /* Увеличиваем отступ между иконками */
+    color: #333; /* Цвет иконок */
+    font-size: 30px; /* Увеличиваем размер иконок */
+    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+}
+
+.social-icons a:hover {
+    color: #e74c3c; /* Цвет иконок при наведении (например, красный) */
 }
 
 .carousel {
