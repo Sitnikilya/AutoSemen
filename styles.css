@@ -12,16 +12,24 @@ header {
     padding: 10px 20px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
+    height: 100px; /* Высота шапки */
 }
 
 .logo {
     display: flex;
     align-items: center;
+    height: 100%; /* Логотип занимает всю высоту шапки */
 }
 
 .logo img {
-    height: 50px;
+    height: 100%; /* Логотип растягивается на всю высоту шапки */
+    width: auto; /* Сохраняем пропорции */
     margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 24px; /* Размер текста названия */
+    margin: 0; /* Убираем отступы */
 }
 
 nav ul {
