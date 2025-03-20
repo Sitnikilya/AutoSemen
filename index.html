@@ -30,28 +30,40 @@
     </header>
 
     <section class="carousel">
-    <div class="carousel-item">
-        <div class="car-content">
-            <div class="car-image">
-                <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
-            </div>
-            <div class="car-details">
-                <h2>Audi A3 35 TFSI, 2021</h2>
-                <p class="price">Цена: 1 000 000 руб.</p>
+    <div class="carousel-container">
+        <!-- Слайд 1 -->
+        <div class="carousel-item active">
+            <div class="car-content">
+                <div class="car-image">
+                    <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
+                </div>
+                <div class="car-details">
+                    <h2>Audi A3 35 TFSI, 2021</h2>
+                    <p class="price">Цена: 1 000 000 руб.</p>
+                </div>
             </div>
         </div>
-    </div>
+
+        <!-- Слайд 2 -->
         <div class="carousel-item">
             <div class="car-content">
-            <div class="car-image">
-                <img src="images/h_elantra/H_Elantra_1.jpg" alt="Audi A3">
+                <div class="car-image">
+                    <img src="images/h_elantra/H_Elantra_1.jpg" alt="Hyundai Elantra">
+                </div>
+                <div class="car-details">
+                    <h2>Hyundai Elantra LUX Premium Edition, 2021</h2>
+                    <p class="price">Цена: 1 200 000 руб.</p>
+                </div>
             </div>
-            <div class="car-details">
-                <h2>Hyndai Elantra LUX Premium Edition, 2021</h2>
-                <p class="price">Цена: 1 200 000 руб.</p>
         </div>
-        <!-- Добавьте еще 3 автомобиля -->
-    </section>
+
+        <!-- Добавьте больше слайдов по аналогии -->
+    </div>
+
+    <!-- Кнопки управления каруселью -->
+    <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+    <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+</section>
 
     <script src="script.js"></script>
 </body>
