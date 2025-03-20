@@ -129,3 +129,61 @@ nav ul li a {
     font-weight: bold;
     margin-top: 20px;
 }
+
+.catalog {
+    padding: 20px;
+}
+
+.car-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.car-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 20px;
+}
+
+.car-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.car-details {
+    margin-top: 15px;
+}
+
+.car-details h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.car-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.car-details th, .car-details td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.car-details th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.car-details .price {
+    font-size: 24px;
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: 20px;
+}
