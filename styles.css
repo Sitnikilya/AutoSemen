@@ -64,27 +64,68 @@ nav ul li a {
     display: flex;
     overflow-x: auto;
     padding: 20px;
+    gap: 20px; /* Расстояние между элементами карусели */
 }
 
 .carousel-item {
     flex: 0 0 auto;
-    width: 300px;
-    margin-right: 20px;
-    text-align: center;
+    width: 100%;
+    max-width: 800px; /* Максимальная ширина элемента */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
 }
 
-.carousel-item img {
+.car-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.car-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.car-image img {
     width: 100%;
     height: auto;
     border-radius: 10px;
 }
 
-.carousel-item h2 {
-    margin: 10px 0;
+.car-details {
+    flex: 1;
+    max-width: 50%;
 }
 
-.carousel-item .price {
-    font-size: 1.5em;
+.car-details h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.car-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.car-details th, .car-details td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.car-details th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+.car-details .price {
+    font-size: 24px;
     color: #e74c3c;
     font-weight: bold;
+    margin-top: 20px;
 }
