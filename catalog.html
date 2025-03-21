@@ -9,181 +9,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Логотип">
-            <h1>Авто из Китая Семен</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Авто</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/вашномер" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://wechat.com" target="_blank"><i class="fab fa-weixin"></i></a>
-        </div>
-    </header>
+    <div class="main-background">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип">
+                <h1>Авто из Китая Семен</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Авто</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/вашномер" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wechat.com" target="_blank"><i class="fab fa-weixin"></i></a>
+            </div>
+        </header>
 
-    <section class="catalog">
-        <h2>Каталог авто</h2>
-        <div class="car-list">
-            <!-- Автомобиль 1 -->
-            <div class="car-item">
-                <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
-                <div class="car-details">
-                    <h3>Audi A3 35 TFSI, 2021</h3>
-                    <table>
-                        <tr>
-                            <th>Характеристика</th>
-                            <th>Значение</th>
-                        </tr>
-                        <tr>
-                            <td>Поколение</td>
-                            <td>IV (8Y)</td>
-                        </tr>
-                        <tr>
-                            <td>Год выпуска</td>
-                            <td>2021</td>
-                        </tr>
-                        <tr>
-                            <td>Пробег</td>
-                            <td>37 000 км</td>
-                        </tr>
-                        <tr>
-                            <td>Кузов</td>
-                            <td>хэтчбек 5 дв.</td>
-                        </tr>
-                        <tr>
-                            <td>Цвет</td>
-                            <td>красный</td>
-                        </tr>
-                        <tr>
-                            <td>Двигатель</td>
-                            <td>1.4 л / 150 л.с. / Бензин</td>
-                        </tr>
-                        <tr>
-                            <td>Коробка</td>
-                            <td>роботизированная</td>
-                        </tr>
-                        <tr>
-                            <td>Привод</td>
-                            <td>передний</td>
-                        </tr>
-                        <tr>
-                            <td>Руль</td>
-                            <td>Левый</td>
-                        </tr>
-                    </table>
-                    <p class="price">Цена: 1 000 000 руб.</p>
+        <section class="catalog">
+            <h2>Каталог автомобилей</h2>
+
+            <!-- Фильтры -->
+            <div class="filters">
+                <h3>Фильтры</h3>
+                <div class="filter-group">
+                    <label for="brand">Марка:</label>
+                    <select id="brand">
+                        <option value="all">Все</option>
+                        <option value="audi">Audi</option>
+                        <option value="bmw">BMW</option>
+                        <option value="hyundai">Hyundai</option>
+                    </select>
                 </div>
+                <div class="filter-group">
+                    <label for="price">Цена до:</label>
+                    <input type="number" id="price" placeholder="Введите цену">
+                </div>
+                <div class="filter-group">
+                    <label for="year">Год выпуска:</label>
+                    <input type="number" id="year" placeholder="Год">
+                </div>
+                <button class="filter-button">Применить</button>
             </div>
 
-            <!-- Автомобиль 2 -->
-            <div class="car-item">
-                <img src="images/bmw_x5/bmw_x5_1.jpg" alt="BMW X5">
-                <div class="car-details">
-                    <h3>BMW X5 xDrive40i, 2020</h3>
-                    <table>
-                        <tr>
-                            <th>Характеристика</th>
-                            <th>Значение</th>
-                        </tr>
-                        <tr>
-                            <td>Поколение</td>
-                            <td>G05</td>
-                        </tr>
-                        <tr>
-                            <td>Год выпуска</td>
-                            <td>2020</td>
-                        </tr>
-                        <tr>
-                            <td>Пробег</td>
-                            <td>45 000 км</td>
-                        </tr>
-                        <tr>
-                            <td>Кузов</td>
-                            <td>внедорожник</td>
-                        </tr>
-                        <tr>
-                            <td>Цвет</td>
-                            <td>черный</td>
-                        </tr>
-                        <tr>
-                            <td>Двигатель</td>
-                            <td>3.0 л / 340 л.с. / Бензин</td>
-                        </tr>
-                        <tr>
-                            <td>Коробка</td>
-                            <td>автоматическая</td>
-                        </tr>
-                        <tr>
-                            <td>Привод</td>
-                            <td>полный</td>
-                        </tr>
-                        <tr>
-                            <td>Руль</td>
-                            <td>Левый</td>
-                        </tr>
-                    </table>
-                    <p class="price">Цена: 3 500 000 руб.</p>
+            <!-- Сетка автомобилей -->
+            <div class="car-grid" id="carGrid">
+                <!-- Автомобиль 1 -->
+                <div class="car-card">
+                    <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
+                    <div class="car-info">
+                        <h3>Audi A3 35 TFSI, 2021</h3>
+                        <p>Пробег: 37 000 км</p>
+                        <p>Цена: <span class="price">1 000 000 руб.</span></p>
+                        <button class="details-button">Подробнее</button>
+                    </div>
                 </div>
+
+                <!-- Автомобиль 2 -->
+                <div class="car-card">
+                    <img src="images/bmw_x5/bmw_x5_1.jpg" alt="BMW X5">
+                    <div class="car-info">
+                        <h3>BMW X5 xDrive40i, 2020</h3>
+                        <p>Пробег: 45 000 км</p>
+                        <p>Цена: <span class="price">3 500 000 руб.</span></p>
+                        <button class="details-button">Подробнее</button>
+                    </div>
+                </div>
+
+                <!-- Добавьте больше автомобилей по аналогии -->
             </div>
-        
-        <div class="car-item">
-            <img src="images/h_elantra/H_Elantra_1.jpg" alt="Elantra">
-            <div class="car-details">
-                <h2>Hyndai Elantra LUX Premium Edition, 2021</h2>
-                <table>
-                    <tr>
-                        <th>Характеристика</th>
-                        <th>Значение</th>
-                    </tr>
-                    <tr>
-                        <td>Поколение</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>Год выпуска</td>
-                        <td>2021</td>
-                    </tr>
-                    <tr>
-                        <td>Пробег</td>
-                        <td>29 000 км</td>
-                    </tr>
-                    <tr>
-                        <td>Кузов</td>
-                        <td>седан</td>
-                    </tr>
-                    <tr>
-                        <td>Цвет</td>
-                        <td>Белый</td>
-                    </tr>
-                    <tr>
-                        <td>Двигатель</td>
-                        <td>1.5 л / 115 л.с. / Бензин</td>
-                    </tr>
-                    <tr>
-                        <td>Коробка</td>
-                        <td>Вариатор</td>
-                    </tr>
-                    <tr>
-                        <td>Привод</td>
-                        <td>передний</td>
-                    </tr>
-                    <tr>
-                        <td>Руль</td>
-                        <td>Левый</td>
-                    </tr>
-                </table>
-            <p class="price">Цена: 1 200 000 руб.</p>
-        </div>
-            <!-- Добавьте еще 3 автомобиля по аналогии -->
-        </div>
-    </section>
+
+            <!-- Пагинация -->
+            <div class="pagination">
+                <button class="page-button">1</button>
+                <button class="page-button">2</button>
+                <button class="page-button">3</button>
+                <span>...</span>
+                <button class="page-button">10</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="catalog.js"></script>
 </body>
 </html>

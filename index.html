@@ -9,59 +9,91 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="images/logo.png" alt="Логотип">
-            <h1>Авто из Китая Семен</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="catalog.html">Авто</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
-        <div class="social-icons">
-            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/вашномер" target="_blank"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://wechat.com" target="_blank"><i class="fab fa-weixin"></i></a>
-        </div>
-    </header>
+    <div class="main-background">
+        <header>
+            <div class="logo">
+                <img src="images/logo.png" alt="Логотип">
+                <h1>Авто из Китая Семен</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Авто</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://wa.me/вашномер" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://wechat.com" target="_blank"><i class="fab fa-weixin"></i></a>
+            </div>
+        </header>
 
-    <section class="main-content">
-    <!-- Карусель слева -->
-    <div class="carousel-container">
-        <div class="carousel">
-            <div class="carousel-item active">
-                <div class="car-image">
-                    <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
-                    <div class="price-overlay">Цена: 1 000 000 руб.</div>
+        <section class="main-content">
+            <!-- Текстовый блок -->
+            <div class="text-block">
+                <h2>Почему выбирают нас?</h2>
+                <p>
+                    Мы — ваш надежный партнер в покупке автомобилей из Китая. Вот что делает нас лучшими:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Прямые контакты с автосалонами в Китае:</strong>
+                        Мы работаем напрямую с крупнейшими дилерами, что позволяет нам предлагать вам лучшие цены и эксклюзивные скидки.
+                    </li>
+                    <li>
+                        <strong>Видео с осмотром автомобиля:</strong>
+                        При покупке б/у авто мы предоставляем подробное видео с осмотром, чтобы вы могли убедиться в идеальном состоянии машины.
+                    </li>
+                    <li>
+                        <strong>Гарантия качества:</strong>
+                        Все автомобили проходят тщательную проверку перед доставкой. Мы заботимся о вашей безопасности и комфорте.
+                    </li>
+                    <li>
+                        <strong>Индивидуальный подход:</strong>
+                        Мы подберем автомобиль, который идеально соответствует вашим потребностям и бюджету.
+                    </li>
+                </ul>
+                <p>
+                    Свяжитесь с нами сегодня и получите персональное предложение!
+                </p>
+                <a href="#contact" class="cta-button">Связаться с нами</a>
+
+                <!-- Блок с контактами -->
+                <div class="contact-block">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +7 (984) 157 92 20</li>
+                        <li><i class="fas fa-envelope"></i> gaodayong666666@163.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Владивосток, ул. Нейбута, 10</li>
+                    </ul>
                 </div>
             </div>
-            <div class="carousel-item">
-                <div class="car-image">
-                    <img src="images/h_elantra/H_Elantra_1.jpg" alt="Hyundai Elantra">
-                    <div class="price-overlay">Цена: 1 200 000 руб.</div>
+
+            <!-- Карусель -->
+            <div class="carousel-container">
+                <div class="carousel">
+                    <div class="carousel-item active">
+                        <div class="car-image">
+                            <img src="images/audi_a3/audi_a3_1.jpg" alt="Audi A3">
+                            <div class="price-overlay">Цена: 1 000 000 руб.</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="car-image">
+                            <img src="images/h_elantra/H_Elantra_1.jpg" alt="Hyundai Elantra">
+                            <div class="price-overlay">Цена: 1 200 000 руб.</div>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Кнопки управления каруселью -->
+                <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
             </div>
-        </div>
-
-        <!-- Кнопки управления каруселью -->
-        <button class="carousel-button prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-button next" onclick="moveSlide(1)">&#10095;</button>
+        </section>
     </div>
-
-    <!-- Текстовый блок справа -->
-    <div class="text-block">
-        <h2>Добро пожаловать!</h2>
-        <p>
-            Мы предлагаем широкий выбор автомобилей из Китая. У нас вы найдете машины на любой вкус и бюджет.
-            Ознакомьтесь с нашим каталогом и выберите идеальный автомобиль для себя.
-        </p>
-        <img src="images/dealership.jpg" alt="Автосалон" class="text-block-image">
-    </div>
-</section>
 
     <script src="carousel.js"></script>
 </body>

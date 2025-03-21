@@ -5,6 +5,31 @@ body {
     box-sizing: border-box;
 }
 
+.main-background {
+    background-image: url('images/map.jpg'); /* Путь к картинке */
+    background-size: cover; /* Картинка покрывает весь блок */
+    background-position: center; /* Центрируем картинку */
+    background-repeat: no-repeat; /* Отключаем повторение */
+    min-height: 100vh; /* Минимальная высота на весь экран */
+    position: relative;
+}
+
+.main-background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Затемнение фона */
+    z-index: 1;
+}
+
+header, .main-content {
+    position: relative;
+    z-index: 2; /* Контент поверх затемнения */
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -66,6 +91,89 @@ nav ul li a {
     padding: 20px;
 }
 
+.text-block {
+    flex: 1;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    
+    color: white;
+    overflow: hidden;
+}
+
+.text-block h2 {
+    font-size: 28px; /* Увеличиваем размер заголовка */
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.text-block p {
+    font-size: 18px; /* Увеличиваем размер текста */
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.text-block ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.text-block ul li {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.text-block ul li strong {
+    color: #e74c3c; /* Красный цвет для выделения */
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #e74c3c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px; /* Увеличиваем размер текста кнопки */
+    margin-top: 20px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #c0392b;
+}
+
+.contact-block {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-top: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.contact-block h3 {
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.contact-block ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-block ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-block ul li i {
+    margin-right: 10px;
+    color: #e74c3c;
+}
+
 .carousel-container {
     flex: 1;
     position: relative;
@@ -107,32 +215,6 @@ nav ul li a {
     border-bottom-right-radius: 15px;
 }
 
-.text-block {
-    flex: 1;
-    padding: 20px;
-    background: #f8f8f8;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.text-block h2 {
-    font-size: 24px;
-    color: #333;
-    margin-top: 0;
-}
-
-.text-block p {
-    font-size: 16px;
-    color: #555;
-    line-height: 1.6;
-}
-
-.text-block-image {
-    width: 100%;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -158,60 +240,137 @@ nav ul li a {
 .carousel-button.next {
     right: 10px;
 }
+
 .catalog {
     padding: 20px;
+    color: white;
 }
 
-.car-list {
+.catalog h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.filters {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.filters h3 {
+    font-size: 24px;
+    margin-top: 0;
+}
+
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.filter-group select, .filter-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.filter-button:hover {
+    background: #c0392b;
+}
+
+.car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 
-.car-item {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.car-card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.car-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
     padding: 20px;
 }
 
-.car-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
+.car-info h3 {
+    font-size: 20px;
+    margin-top: 0;
 }
 
-.car-details {
-    margin-top: 15px;
-}
-
-.car-details h3 {
+.car-info p {
+    font-size: 16px;
     margin: 10px 0;
-    font-size: 24px;
-    color: #333;
 }
 
-.car-details table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-}
-
-.car-details th, .car-details td {
-    padding: 10px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-.car-details th {
-    background-color: #f8f8f8;
+.car-info .price {
+    font-size: 18px;
     font-weight: bold;
-}
-
-.car-details .price {
-    font-size: 24px;
     color: #e74c3c;
-    font-weight: bold;
+}
+
+.details-button {
+    padding: 10px 20px;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.details-button:hover {
+    background: #c0392b;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
     margin-top: 20px;
+}
+
+.page-button {
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.page-button:hover {
+    background: #e74c3c;
 }
