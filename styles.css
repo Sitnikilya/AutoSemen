@@ -1,16 +1,20 @@
+/* Общие стили для всего документа */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: #f8f8f8; /* Светлый фон для всей страницы */
+    color: #333; /* Темный текст */
 }
 
+/* Основной фон с затемнением */
 .main-background {
-    background-image: url('images/map.jpg'); /* Путь к картинке */
-    background-size: cover; /* Картинка покрывает весь блок */
-    background-position: center; /* Центрируем картинку */
-    background-repeat: no-repeat; /* Отключаем повторение */
-    min-height: 100vh; /* Минимальная высота на весь экран */
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
     position: relative;
 }
 
@@ -22,39 +26,37 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(0, 0, 0, 0.4); /* Затемнение фона */
-    z-index: 1;
+    z-index: 1; /* Затемнение находится под контентом */
 }
 
-header, .main-content {
-    position: relative;
-    z-index: 2; /* Контент поверх затемнения */
-}
-
+/* Шапка сайта */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f8f8f8;
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
-    height: 100px; /* Высота шапки */
+    height: 100px;
+    position: relative;
+    z-index: 2; /* Шапка поверх затемнения */
 }
 
 .logo {
     display: flex;
     align-items: center;
-    height: 100%; /* Логотип занимает всю высоту шапки */
+    height: 100%;
 }
 
 .logo img {
-    height: 100%; /* Логотип растягивается на всю высоту шапки */
-    width: auto; /* Сохраняем пропорции */
+    height: 100%;
+    width: auto;
     margin-right: 10px;
 }
 
 .logo h1 {
-    font-size: 24px; /* Размер текста названия */
-    margin: 0; /* Убираем отступы */
+    font-size: 24px;
+    margin: 0;
 }
 
 nav ul {
@@ -75,41 +77,45 @@ nav ul li a {
 }
 
 .social-icons a {
-    margin: 0 15px; /* Увеличиваем отступ между иконками */
-    color: #333; /* Цвет иконок */
-    font-size: 30px; /* Увеличиваем размер иконок */
-    transition: color 0.3s ease; /* Плавное изменение цвета при наведении */
+    margin: 0 15px;
+    color: #333;
+    font-size: 24px;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 3; /* Иконки поверх всего */
 }
 
 .social-icons a:hover {
-    color: #e74c3c; /* Цвет иконок при наведении (например, красный) */
+    color: #e74c3c; /* Цвет иконок при наведении */
 }
 
+/* Основной контент */
 .main-content {
     display: flex;
-    gap: 20px; /* Расстояние между каруселью и текстовым блоком */
+    gap: 20px;
     padding: 20px;
+    position: relative;
+    z-index: 2; /* Контент поверх затемнения */
 }
 
 .text-block {
     flex: 1;
     padding: 40px;
-    background: rgba(255, 255, 255, 0.1); /* Полупрозрачный фон */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    
     color: white;
     overflow: hidden;
 }
 
 .text-block h2 {
-    font-size: 28px; /* Увеличиваем размер заголовка */
+    font-size: 28px;
     margin-top: 0;
     margin-bottom: 20px;
 }
 
 .text-block p {
-    font-size: 18px; /* Увеличиваем размер текста */
+    font-size: 18px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -127,7 +133,7 @@ nav ul li a {
 }
 
 .text-block ul li strong {
-    color: #e74c3c; /* Красный цвет для выделения */
+    color: #e74c3c;
 }
 
 .cta-button {
@@ -137,7 +143,7 @@ nav ul li a {
     color: white;
     text-decoration: none;
     border-radius: 5px;
-    font-size: 18px; /* Увеличиваем размер текста кнопки */
+    font-size: 18px;
     margin-top: 20px;
     transition: background 0.3s ease;
 }
@@ -174,6 +180,7 @@ nav ul li a {
     color: #e74c3c;
 }
 
+/* Карусель */
 .carousel-container {
     flex: 1;
     position: relative;
@@ -196,7 +203,7 @@ nav ul li a {
 .car-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Картинка занимает всё пространство */
+    object-fit: cover;
     border-radius: 15px;
 }
 
@@ -205,7 +212,7 @@ nav ul li a {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    background: rgba(0, 0, 0, 0.7);
     color: white;
     text-align: center;
     padding: 10px;
@@ -241,28 +248,33 @@ nav ul li a {
     right: 10px;
 }
 
+/* Каталог автомобилей */
 .catalog {
     padding: 20px;
-    color: white;
+    color: #333; /* Темный текст для лучшей читаемости */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .catalog h2 {
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 20px;
+    color: #e74c3c; /* Красный цвет для заголовка */
 }
 
 .filters {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
-    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .filters h3 {
     font-size: 24px;
     margin-top: 0;
+    color: #333; /* Темный текст */
 }
 
 .filter-group {
@@ -273,6 +285,7 @@ nav ul li a {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
+    color: #333; /* Темный текст */
 }
 
 .filter-group select, .filter-group input {
@@ -280,8 +293,8 @@ nav ul li a {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    color: #333; /* Темный текст */
 }
 
 .filter-button {
@@ -306,11 +319,10 @@ nav ul li a {
 }
 
 .car-card {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
 }
 
 .car-card img {
@@ -321,6 +333,7 @@ nav ul li a {
 
 .car-info {
     padding: 20px;
+    color: #333; /* Темный текст */
 }
 
 .car-info h3 {
@@ -336,7 +349,7 @@ nav ul li a {
 .car-info .price {
     font-size: 18px;
     font-weight: bold;
-    color: #e74c3c;
+    color: #e74c3c; /* Красный цвет для цены */
 }
 
 .details-button {
@@ -362,8 +375,8 @@ nav ul li a {
 
 .page-button {
     padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    color: #333; /* Темный текст */
     border: none;
     border-radius: 5px;
     margin: 0 5px;
@@ -373,4 +386,290 @@ nav ul li a {
 
 .page-button:hover {
     background: #e74c3c;
+    color: white;
+}
+
+/* Детали автомобиля */
+.car-details {
+    padding: 20px;
+    color: #333; /* Темный текст */
+}
+
+.car-details h2 {
+    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.car-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.car-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.car-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.car-specs {
+    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.car-specs h3 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #333; /* Темный текст */
+}
+
+.car-specs ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.car-specs ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333; /* Темный текст */
+}
+
+.car-specs ul li strong {
+    color: #e74c3c; /* Красный цвет для выделения */
+}
+
+/* Стили для страницы "О нас" */
+.about-us {
+    padding: 40px 20px;
+    color: white;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background-image: url('images/map.jpg'); /* Добавляем фон */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.about-us h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.about-section, .advantages-section {
+    background: rgba(0, 0, 0, 0.7); /* Затемнение текстовых секций */
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.about-section h3, .advantages-section h3 {
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #e74c3c; /* Красный цвет для заголовков */
+}
+
+.about-section p {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9); /* Белый текст с прозрачностью */
+}
+
+.advantages-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.advantages-section ul li {
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9); /* Белый текст с прозрачностью */
+}
+
+.advantages-section ul li strong {
+    color: #e74c3c; /* Красный цвет для выделения */
+    font-weight: bold;
+}
+
+/* Стили для страницы контактов */
+.contact-section {
+    padding: 40px 20px;
+    color: #333; /* Темный текст для лучшей читаемости */
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 32px;
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-info p {
+    margin-bottom: 20px;
+}
+
+.contact-info a {
+    color: #e74c3c;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #c0392b;
+}
+
+.contact-info i {
+    margin-right: 10px;
+    color: #e74c3c;
+    font-size: 24px; /* Увеличиваем размер иконок */
+}
+
+/* Большие и яркие иконки для контактов */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.contact-icons a {
+    font-size: 48px; /* Большие иконки */
+    color: #e74c3c; /* Красный цвет */
+    transition: color 0.3s ease;
+}
+
+.contact-icons a:hover {
+    color: #c0392b; /* Темнее при наведении */
+}
+
+/* Выделение номера телефона */
+.phone-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 20px 0;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #e74c3c;
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .about-us {
+        padding: 20px 10px;
+    }
+
+    .about-section, .advantages-section {
+        padding: 20px;
+    }
+
+    .about-us h2 {
+        font-size: 28px;
+    }
+
+    .about-section h3, .advantages-section h3 {
+        font-size: 22px;
+    }
+
+    .about-section p, .advantages-section ul li {
+        font-size: 16px;
+    }
+
+    .contact-section {
+        padding: 20px 10px;
+    }
+
+    .contact-section h2 {
+        font-size: 28px;
+    }
+
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .contact-icons a {
+        font-size: 36px; 
+    }
+
+    .phone-number {
+        font-size: 20px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+    }
 }
