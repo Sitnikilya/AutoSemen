@@ -60,17 +60,21 @@ nav ul li a {
     color: #e74c3c; /* Цвет иконок при наведении (например, красный) */
 }
 
-.carousel {
+.main-content {
+    display: flex;
+    gap: 20px; /* Расстояние между каруселью и текстовым блоком */
+    padding: 20px;
+}
+
+.carousel-container {
+    flex: 1;
     position: relative;
-    width: 100%;
-    max-width: 800px; /* Максимальная ширина карусели */
-    margin: 0 auto;
     overflow: hidden;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.carousel-container {
+.carousel {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
@@ -78,45 +82,55 @@ nav ul li a {
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-}
-
-.carousel-item.active {
-    opacity: 1;
-}
-
-.car-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    background: #fff;
-    border-radius: 15px;
+    position: relative;
 }
 
 .car-image img {
     width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover; /* Картинка занимает всё пространство */
+    border-radius: 15px;
 }
 
-.car-details {
+.price-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон */
+    color: white;
     text-align: center;
-    margin-top: 15px;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
 }
 
-.car-details h2 {
+.text-block {
+    flex: 1;
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-block h2 {
     font-size: 24px;
     color: #333;
-    margin: 10px 0;
+    margin-top: 0;
 }
 
-.car-details .price {
-    font-size: 22px;
-    color: #e74c3c;
-    font-weight: bold;
+.text-block p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.text-block-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .carousel-button {
@@ -144,7 +158,6 @@ nav ul li a {
 .carousel-button.next {
     right: 10px;
 }
-
 .catalog {
     padding: 20px;
 }
