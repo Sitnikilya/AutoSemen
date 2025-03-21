@@ -251,30 +251,26 @@ nav ul li a {
 /* Каталог автомобилей */
 .catalog {
     padding: 20px;
-    color: #333; /* Темный текст для лучшей читаемости */
-    max-width: 1200px;
-    margin: 0 auto;
+    color: white;
 }
 
 .catalog h2 {
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 20px;
-    color: #e74c3c; /* Красный цвет для заголовка */
 }
 
 .filters {
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .filters h3 {
     font-size: 24px;
     margin-top: 0;
-    color: #333; /* Темный текст */
 }
 
 .filter-group {
@@ -285,7 +281,6 @@ nav ul li a {
     display: block;
     font-size: 16px;
     margin-bottom: 5px;
-    color: #333; /* Темный текст */
 }
 
 .filter-group select, .filter-group input {
@@ -293,8 +288,8 @@ nav ul li a {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
-    color: #333; /* Темный текст */
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
 }
 
 .filter-button {
@@ -319,10 +314,11 @@ nav ul li a {
 }
 
 .car-card {
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .car-card img {
@@ -333,7 +329,6 @@ nav ul li a {
 
 .car-info {
     padding: 20px;
-    color: #333; /* Темный текст */
 }
 
 .car-info h3 {
@@ -349,7 +344,7 @@ nav ul li a {
 .car-info .price {
     font-size: 18px;
     font-weight: bold;
-    color: #e74c3c; /* Красный цвет для цены */
+    color: #e74c3c;
 }
 
 .details-button {
@@ -375,8 +370,8 @@ nav ul li a {
 
 .page-button {
     padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
-    color: #333; /* Темный текст */
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
     border: none;
     border-radius: 5px;
     margin: 0 5px;
@@ -386,25 +381,23 @@ nav ul li a {
 
 .page-button:hover {
     background: #e74c3c;
-    color: white;
 }
 
 /* Детали автомобиля */
 .car-details {
     padding: 20px;
-    color: #333; /* Темный текст */
+    color: white;
 }
 
 .car-details h2 {
     font-size: 28px;
     margin-top: 0;
     margin-bottom: 20px;
-    color: #e74c3c; /* Красный цвет для заголовка */
 }
 
 .car-gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 10px;
     margin-bottom: 20px;
 }
@@ -421,17 +414,16 @@ nav ul li a {
 }
 
 .car-specs {
-    background: rgba(255, 255, 255, 0.9); /* Белый фон с небольшой прозрачностью */
+    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
     border-radius: 15px;
     margin-bottom: 20px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
 }
 
 .car-specs h3 {
     font-size: 24px;
     margin-top: 0;
-    color: #333; /* Темный текст */
 }
 
 .car-specs ul {
@@ -442,11 +434,10 @@ nav ul li a {
 .car-specs ul li {
     margin-bottom: 10px;
     font-size: 16px;
-    color: #333; /* Темный текст */
 }
 
 .car-specs ul li strong {
-    color: #e74c3c; /* Красный цвет для выделения */
+    color: #e74c3c;
 }
 
 /* Стили для страницы "О нас" */
@@ -455,13 +446,9 @@ nav ul li a {
     color: white;
     max-width: 1200px;
     margin: 0 auto;
-    background: rgba(0, 0, 0, 0.6); /* Затемнение фона */
+    background: rgba(0, 0, 0, 0.6);
     border-radius: 15px;
     backdrop-filter: blur(10px);
-    background-image: url('images/map.jpg'); /* Добавляем фон */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 .about-us h2 {
@@ -469,11 +456,11 @@ nav ul li a {
     margin-top: 0;
     margin-bottom: 30px;
     text-align: center;
-    color: #e74c3c; /* Красный цвет для заголовка */
+    color: #e74c3c;
 }
 
 .about-section, .advantages-section {
-    background: rgba(0, 0, 0, 0.7); /* Затемнение текстовых секций */
+    background: rgba(255, 255, 255, 0.1);
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 30px;
@@ -484,14 +471,14 @@ nav ul li a {
     font-size: 26px;
     margin-top: 0;
     margin-bottom: 20px;
-    color: #e74c3c; /* Красный цвет для заголовков */
+    color: #e74c3c;
 }
 
 .about-section p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
-    color: rgba(255, 255, 255, 0.9); /* Белый текст с прозрачностью */
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .advantages-section ul {
@@ -503,18 +490,18 @@ nav ul li a {
     margin-bottom: 15px;
     font-size: 18px;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.9); /* Белый текст с прозрачностью */
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .advantages-section ul li strong {
-    color: #e74c3c; /* Красный цвет для выделения */
+    color: #e74c3c;
     font-weight: bold;
 }
 
 /* Стили для страницы контактов */
 .contact-section {
     padding: 40px 20px;
-    color: #333; /* Темный текст для лучшей читаемости */
+    color: #333;
     max-width: 800px;
     margin: 0 auto;
     text-align: center;
@@ -524,7 +511,7 @@ nav ul li a {
     font-size: 32px;
     margin-top: 0;
     margin-bottom: 30px;
-    color: #e74c3c; /* Красный цвет для заголовка */
+    color: #e74c3c;
 }
 
 .contact-info {
@@ -549,10 +536,9 @@ nav ul li a {
 .contact-info i {
     margin-right: 10px;
     color: #e74c3c;
-    font-size: 24px; /* Увеличиваем размер иконок */
+    font-size: 24px;
 }
 
-/* Большие и яркие иконки для контактов */
 .contact-icons {
     display: flex;
     justify-content: center;
@@ -561,21 +547,19 @@ nav ul li a {
 }
 
 .contact-icons a {
-    font-size: 48px; /* Большие иконки */
-    color: #e74c3c; /* Красный цвет */
+    font-size: 48px;
+    color: #e74c3c;
     transition: color 0.3s ease;
 }
 
 .contact-icons a:hover {
-    color: #c0392b; /* Темнее при наведении */
+    color: #c0392b;
 }
 
-/* Выделение номера телефона */
 .phone-number {
     font-size: 24px;
     font-weight: bold;
     color: #e74c3c;
-    margin: 20px 0;
 }
 
 /* Модальное окно */
@@ -629,12 +613,88 @@ nav ul li a {
 
 /* Адаптивные стили для мобильных устройств */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .logo {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .main-content {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .text-block {
+        padding: 20px;
+    }
+
+    .carousel-container {
+        margin-top: 20px;
+    }
+
+    .catalog {
+        padding: 10px;
+    }
+
+    .filters {
+        padding: 15px;
+    }
+
+    .car-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .car-card img {
+        height: 150px;
+    }
+
+    .car-info {
+        padding: 10px;
+    }
+
+    .car-info h3 {
+        font-size: 18px;
+    }
+
+    .car-info p {
+        font-size: 14px;
+    }
+
+    .car-details {
+        padding: 10px;
+    }
+
+    .car-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .car-specs {
+        padding: 15px;
+    }
+
     .about-us {
         padding: 20px 10px;
     }
 
     .about-section, .advantages-section {
-        padding: 20px;
+        padding: 15px;
     }
 
     .about-us h2 {
@@ -662,7 +722,7 @@ nav ul li a {
     }
 
     .contact-icons a {
-        font-size: 36px; 
+        font-size: 36px;
     }
 
     .phone-number {
@@ -671,5 +731,48 @@ nav ul li a {
 
     .modal-content {
         margin: 20% auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 20px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+    }
+
+    .text-block h2 {
+        font-size: 24px;
+    }
+
+    .text-block p {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .car-gallery {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+
+    .car-specs h3 {
+        font-size: 20px;
+    }
+
+    .car-specs ul li {
+        font-size: 14px;
+    }
+
+    .contact-icons a {
+        font-size: 24px;
+    }
+
+    .phone-number {
+        font-size: 18px;
     }
 }
