@@ -401,7 +401,8 @@ nav ul li a {
 
 .car-card img {
     width: 100%;
-    height: auto;
+    height: 200px; /* Фиксированная высота для всех изображений */
+    object-fit: cover; /* Сохраняет пропорции изображения, обрезая его */
     display: block;
 }
 
@@ -424,26 +425,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Пагинация */
-.pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.page-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.page-button:hover {
-    background-color: #0056b3;
-}
 /* Адаптивные стили для каталога */
 @media (max-width: 768px) {
     .catalog {
@@ -459,7 +440,7 @@ nav ul li a {
     }
 
     .car-card img {
-        height: 150px; /* Уменьшаем высоту изображений на мобильных устройствах */
+        height: 150px; /* Уменьшаем высоту для мобильных устройств */
     }
 
     .car-info h3 {
@@ -472,11 +453,6 @@ nav ul li a {
 
     .car-info .price {
         font-size: 1.1rem;
-    }
-
-    .details-button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
     }
 }
 
@@ -500,14 +476,4 @@ nav ul li a {
     .car-info .price {
         font-size: 1rem;
     }
-
-    .details-button {
-        font-size: 0.8rem;
-        padding: 6px 12px;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
 }
