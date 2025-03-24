@@ -660,3 +660,46 @@ nav ul li a {
     position: relative;
     z-index: 2; /* Текст поверх оверлея */
 }
+
+/* Стили для раздела контактов */
+.contact-section {
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Добавьте отступы для текста */
+    color: #fff; /* Белый текст для контраста с фоном */
+    border-radius: 10px; /* Закругленные углы для красоты */
+    margin: 20px; /* Отступы от других элементов */
+}
+
+.contact-section {
+    position: relative;
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Черный оверлей с прозрачностью 50% */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.contact-section h2,
+.contact-section p,
+.contact-section ul {
+    position: relative;
+    z-index: 2; /* Текст поверх оверлея */
+}
