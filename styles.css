@@ -617,3 +617,46 @@ nav ul li a {
         height: 50px;
     }
 }
+
+.about-us {
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px; /* Добавьте отступы для текста */
+    color: #fff; /* Белый текст для контраста с фоном */
+    border-radius: 10px; /* Закругленные углы для красоты */
+    margin: 20px; /* Отступы от других элементов */
+}
+
+.about-us {
+    position: relative;
+    background-image: url('images/map.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Черный оверлей с прозрачностью 50% */
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.about-us h2,
+.about-us h3,
+.about-us p,
+.about-us ul {
+    position: relative;
+    z-index: 2; /* Текст поверх оверлея */
+}
