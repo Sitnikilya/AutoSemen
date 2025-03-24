@@ -163,11 +163,10 @@ nav ul li a {
 }
 
 .carousel-container {
-    flex: 1 1 300px;
     position: relative;
+    max-width: 800px;
+    margin: 0 auto;
     overflow: hidden;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .carousel {
@@ -178,28 +177,26 @@ nav ul li a {
 .carousel-item {
     min-width: 100%;
     box-sizing: border-box;
-    position: relative;
+    display: none;
+}
+
+.carousel-item.active {
+    display: block;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    border-radius: 15px;
 }
 
 .price-overlay {
     position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 10px;
+    left: 10px;
     background: rgba(0, 0, 0, 0.7);
-    color: var(--white);
-    text-align: center;
-    padding: 0.5rem;
-    font-size: 1.25rem;
-    font-weight: bold;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 .carousel-button {
@@ -207,25 +204,19 @@ nav ul li a {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(0, 0, 0, 0.5);
-    color: var(--white);
+    color: white;
     border: none;
-    padding: 0.5rem;
+    padding: 10px;
     cursor: pointer;
-    border-radius: 50%;
-    font-size: 1.5rem;
-    transition: background 0.3s ease;
-}
-
-.carousel-button:hover {
-    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
 }
 
 .carousel-button.prev {
-    left: 1rem;
+    left: 10px;
 }
 
 .carousel-button.next {
-    right: 1rem;
+    right: 10px;
 }
 
 /* Адаптивные стили */
@@ -343,70 +334,52 @@ nav ul li a {
     }
 }
 
-/* Стили для каталога автомобилей */
+/* Общие стили для страницы каталога */
 .catalog {
+    background-color: white; /* Белый фон */
+    color: black; /* Черный текст */
     padding: 20px;
-    color: var(--white);
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
-.catalog h2 {
-    font-size: 2rem;
-    margin-top: 0;
-    margin-bottom: 20px;
-    color: var(--primary-color);
+/* Стили для заголовков */
+.catalog h2, .catalog h3 {
+    color: black; /* Черный цвет для заголовков */
 }
 
+/* Стили для фильтров */
 .filters {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    border-radius: 15px;
+    background-color: #f9f9f9; /* Светлый фон для блока фильтров */
+    padding: 15px;
+    border-radius: 8px;
     margin-bottom: 20px;
-    backdrop-filter: blur(5px);
 }
 
-.filters h3 {
-    font-size: 1.5rem;
-    margin-top: 0;
-    color: var(--white);
+.filters label {
+    color: black; /* Черный цвет для текста фильтров */
 }
 
-.filter-group {
-    margin-bottom: 15px;
+.filters input, .filters select {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px;
+    border-radius: 4px;
 }
 
-.filter-group label {
-    display: block;
-    font-size: 1rem;
-    margin-bottom: 5px;
-    color: var(--white);
-}
-
-.filter-group select, .filter-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--white);
-}
-
-.filter-button {
-    padding: 10px 20px;
-    background: var(--primary-color);
-    color: var(--white);
+.filters button {
+    background-color: #007bff; /* Синий цвет кнопки */
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease;
 }
 
-.filter-button:hover {
-    background: var(--secondary-color);
+.filters button:hover {
+    background-color: #0056b3; /* Темно-синий при наведении */
 }
 
+/* Стили для карточек автомобилей */
 .car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -414,23 +387,22 @@ nav ul li a {
 }
 
 .car-card {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 15px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .car-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .car-card img {
     width: 100%;
-    height: 200px; /* Фиксированная высота для изображений */
-    object-fit: cover; /* Изображение заполняет контейнер без искажений */
-    border-radius: 15px 15px 0 0;
+    height: auto;
+    display: block;
 }
 
 .car-info {
@@ -438,40 +410,40 @@ nav ul li a {
 }
 
 .car-info h3 {
-    font-size: 1.25rem;
-    margin-top: 0;
-    color: var(--white);
+    margin: 0 0 10px;
+    color: black; /* Черный цвет для названия автомобиля */
 }
 
 .car-info p {
-    font-size: 1rem;
-    margin: 10px 0;
-    color: rgba(255, 255, 255, 0.9);
+    margin: 5px 0;
+    color: #333; /* Темно-серый цвет для текста */
 }
 
 .car-info .price {
-    font-size: 1.25rem;
+    color: #007bff; /* Синий цвет для цены */
     font-weight: bold;
-    color: var(--primary-color);
 }
 
-.details-button {
-    padding: 10px 20px;
-    background: var(--primary-color);
-    color: var(--white);
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.page-button {
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 1rem;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    width: 100%;
-    margin-top: 10px;
 }
 
-.details-button:hover {
-    background: var(--secondary-color);
+.page-button:hover {
+    background-color: #0056b3;
 }
-
 /* Адаптивные стили для каталога */
 @media (max-width: 768px) {
     .catalog {
@@ -533,4 +505,9 @@ nav ul li a {
         font-size: 0.8rem;
         padding: 6px 12px;
     }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
