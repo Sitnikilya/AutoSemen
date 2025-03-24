@@ -619,14 +619,21 @@ nav ul li a {
 }
 
 .about-us {
+    position: relative;
     background-image: url('images/map.jpg');
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 20px; /* Добавьте отступы для текста */
-    color: #fff; /* Белый текст для контраста с фоном */
-    border-radius: 10px; /* Закругленные углы для красоты */
-    margin: 20px; /* Отступы от других элементов */
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    margin: 20px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .about-us {
