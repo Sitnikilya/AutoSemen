@@ -477,3 +477,143 @@ nav ul li a {
         font-size: 1rem;
     }
 }
+
+/* Стили для страницы автомобиля */
+.car-details {
+    padding: 20px;
+    background-color: white;
+    color: black;
+}
+
+.car-details h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.car-content {
+    display: flex;
+    gap: 20px;
+}
+
+/* Галерея */
+.car-gallery {
+    flex: 1;
+}
+
+.main-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thumbnails {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.thumbnails img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Описание автомобиля */
+.car-specs {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.car-specs h3 {
+    margin-top: 0;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.car-specs ul {
+    list-style: none;
+    padding: 0;
+}
+
+.car-specs ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.car-specs ul li strong {
+    color: #333;
+}
+
+.contact-block {
+    margin-top: 20px;
+}
+
+.contact-block h3 {
+    margin-bottom: 10px;
+    color: #e74c3c; /* Красный цвет для заголовка */
+}
+
+.contact-block ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-block ul li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.contact-block ul li i {
+    margin-right: 10px;
+    color: #e74c3c; /* Красный цвет для иконок */
+}
+
+/* Адаптивные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .car-content {
+        flex-direction: column;
+    }
+
+    .thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .thumbnails img {
+        height: 60px;
+    }
+
+    .car-specs {
+        padding: 15px;
+    }
+
+    .car-specs ul li {
+        font-size: 14px;
+    }
+
+    .contact-block ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .thumbnails img {
+        height: 50px;
+    }
+}
