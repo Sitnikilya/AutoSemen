@@ -108,7 +108,8 @@ nav ul li a {
 .text-block {
     flex: 1 1 300px;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.7); /* Затемнение фона для лучшей читаемости */
+    backdrop-filter: blur(5px);
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: var(--white);
@@ -118,12 +119,14 @@ nav ul li a {
     font-size: 2rem;
     margin-top: 0;
     margin-bottom: 1.5rem;
+    color: var(--primary-color); /* Красный цвет для заголовков */
 }
 
 .text-block p {
     font-size: var(--font-size-large);
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    color: rgba(255, 255, 255, 0.9); /* Белый текст с небольшой прозрачностью */
 }
 
 .text-block ul {
@@ -136,6 +139,7 @@ nav ul li a {
     margin-bottom: 1rem;
     font-size: var(--font-size-medium);
     line-height: 1.6;
+    color: rgba(255, 255, 255, 0.9); /* Белый текст с небольшой прозрачностью */
 }
 
 .text-block ul li strong {
@@ -229,42 +233,112 @@ nav ul li a {
     header {
         flex-direction: column;
         text-align: center;
+        padding: 0.5rem;
+    }
+
+    .logo img {
+        height: 50px; /* Уменьшаем логотип */
+    }
+
+    .logo h1 {
+        font-size: 1.25rem; /* Уменьшаем размер текста */
     }
 
     nav ul {
         flex-direction: column;
-        margin-top: 1rem;
+        margin-top: 0.5rem;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    .social-icons {
+        margin-top: 0.5rem;
     }
 
     .main-content {
         flex-direction: column;
-        padding: 1rem;
+        padding: 0.5rem;
     }
 
     .text-block {
         padding: 1rem;
     }
 
-    .carousel-container {
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo h1 {
-        font-size: 1.25rem;
-    }
-
     .text-block h2 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Уменьшаем заголовок */
     }
 
     .text-block p, .text-block ul li {
-        font-size: var(--font-size-small);
+        font-size: 0.9rem; /* Уменьшаем размер текста */
     }
 
     .cta-button {
-        font-size: var(--font-size-medium);
+        font-size: 0.9rem;
         padding: 0.5rem 1rem;
+    }
+
+    .carousel-container {
+        margin-top: 1rem;
+    }
+
+    .carousel-item img {
+        height: 200px; /* Уменьшаем высоту изображений */
+    }
+
+    .price-overlay {
+        font-size: 1rem; /* Уменьшаем размер текста */
+    }
+
+    .carousel-button {
+        font-size: 1.25rem; /* Уменьшаем кнопки */
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    header {
+        padding: 1rem;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .text-block {
+        padding: 1.5rem;
+    }
+
+    .text-block h2 {
+        font-size: 1.75rem;
+    }
+
+    .text-block p, .text-block ul li {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 1rem;
+        padding: 0.75rem 1.5rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .price-overlay {
+        font-size: 1.25rem;
+    }
+
+    .carousel-button {
+        font-size: 1.5rem;
     }
 }
