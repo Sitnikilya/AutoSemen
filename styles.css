@@ -664,13 +664,19 @@ nav ul li a {
 /* Стили для раздела контактов */
 .contact-section {
     background-image: url('images/map.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    padding: 20px; /* Добавьте отступы для текста */
-    color: #fff; /* Белый текст для контраста с фоном */
-    border-radius: 10px; /* Закругленные углы для красоты */
+    background-size: contain; /* Изображение будет полностью видно */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Запрещает повторение */
+    padding: 20px; /* Отступы для текста */
+    color: #fff; /* Белый текст для контраста */
+    border-radius: 10px; /* Закругленные углы */
     margin: 20px; /* Отступы от других элементов */
+    min-height: 400px; /* Минимальная высота раздела */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .contact-section {
